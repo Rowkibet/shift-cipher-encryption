@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: rgb(65, 105, 225);
+    border: 1px solid rgb(65, 105, 225);
+    border-radius: 50px;
+    padding: 25px 40px;
+    color: white;
+    font-size: 1.2rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* .btn a {
+    border-radius: 50px;
+    padding: 25px 40px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+} */
+
+.small-btn {
+    background-color: rgb(65, 105, 225);
+    border: 1px solid rgb(65, 105, 225);
+    border-radius: 10px;
+    padding: 11px 25px;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.small-btn {
+    font-size: 80px;
+}
+
+.msg, .form-error {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+    font-size: 19px;
+}
+
+.msg.success {
+    color: #3a6e3a;
+    border: 1px solid #3a6e3a;
+    background: #bcf5bc;
+}
+
+.msg.error, .form-error.error {
+    color: #884b4b;
+    border: 1px solid #884b4b;
+    background: #f5bcbc;
+}
+
+.form-error {
+    position: absolute;
+    top:68px;
+    left: 0;
+}
+
+header {
+    background: rgb(65, 105, 225);
+    height: 68px;
+}
+
+header * {
+    color: white;
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+} 
+
+header .logo-text {
+    margin: 9px;
+    /* font-family: 'Candal', serif; */
+}
+
+header ul {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+ 
+header ul li ul {
+    position: absolute;
+    top: 66px; /* same as the height of header */
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 888888;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    color: #444;
+    background-color: white;
+}
+
+header ul li ul a:hover {
+    background: #d5d6d6;
+}
+
+header ul li ul a.logout {
+    color: red; 
+}
+
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+ 
+header ul li a:hover {
+    background: rgb(49, 79, 170);
+    transition: 500ms;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+.page-wrapper {
+    min-height: calc(100vh - 68px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    min-height: calc(100vh - 118px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: max-content;
+}
+
+.container h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+.container p {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.enc-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.encrypt h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.encrypt p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.float-encrypt, .float-decrypt, .upload-popup {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 80%;
+    padding: 10px 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 2;
+}
+
+.float-encrypt.active, .float-decrypt.active, .upload-popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.float-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.float-header h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.float-body label{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.float-body select, .float-body input {
+    display: block;
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 10px;
+    font-size: 17px; 
+    outline:none;
+}
+
+.float-header .close-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+#overlay {
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
